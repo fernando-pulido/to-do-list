@@ -1,12 +1,18 @@
+import { useState } from 'react'
 import './App.css'
-import Form from './components/formulario/Formulario'
+import {} from './formulario/type'
+
+import { mockToDoList } from './mockTodo/mock'
+import Form from './formulario/InputForm'
 
 function App() {
+  const [todos] = useState(mockToDoList)
+
   return (
     <div className="main-container">
       <h1>To-do-list</h1>
       <div className="container-form">
-        <Form />
+        <Form todos={todos} />
       </div>
     </div>
   )
